@@ -45,3 +45,9 @@ setelah kita mendapati row 1 non-evil kemudian sub-query di jalankan dengan cara
 **pejelasan**:
 buat cte assigment kemudian gabungkan tabel hacker dan submission. kemudian filter data yang mana score 0 akan langsung di hapus. tampilkan challange_id, hacker_id, score dan buat row_number untuk membuat peringkat masing masing hacker_id dan setiap challange berdasarkan score 
 tertinggi. setelah itu buat main query dari cte assigment yang dimana hanya peringkat 1 yang ditampilkan. setelah itu group by berdasarkan hacker_id kemudian jumlahkan kemudian urutkan berdasarkan score tertinggi dan jika sama maka urutkan hacker_id asc
+
+
+
+## reflection
+- penggunaan tergantung kasus, contoh jika kita ingin mencari nilai tertinggi di setiap tugas yang diberikan kita bisa menggunakan windows_funtion row_number untuk menandai nilai tertinggi atau penggunaa cte untuk membuat table sementara sehingga dapat di gunakan di main query dan sub query hanya unutk optimasi saja
+- window_fuction karena kita tidak perlu menghilangkan atau menggabungkan beberapa table untuk melakukan aggregate, ranking dll. ini sangat penting apa lagi ketika kita ingin menganalisis tabel 
